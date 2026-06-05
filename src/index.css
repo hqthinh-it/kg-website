@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #800000;
+  --color-primary-light: #a31d1d;
+  --color-primary-dark: #5c0000;
+  --color-accent: #D4B483;
+  --color-accent-dark: #bba174;
+  --color-bg-base: #F8F8F8;
+  --color-text-base: #2B2B2B;
+  
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Base resets & enhancement styling */
+@layer base {
+  body, button, input, select, textarea {
+    font-family: var(--font-sans);
+  }
+  
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-base);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #800000;
+    color: #ffffff;
+  }
+}
+
+/* Professional Polish Custom shadows */
+.card-shadow {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Custom styled rich text representation inside Blogs */
+.markdown-body h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid #800000;
+  padding-left: 0.75rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #4b5563;
+  margin-bottom: 1.25rem;
+}
+
+.markdown-body ul, .markdown-body ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  color: #4b5563;
+}
+
+.markdown-body ul {
+  list-style-type: disc;
+}
+
+.markdown-body ol {
+  list-style-type: decimal;
+}
+
+.markdown-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.markdown-body th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.markdown-body td, .markdown-body th {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.markdown-body blockquote {
+  border-left: 4px solid #D4B483;
+  padding-left: 1rem;
+  font-style: italic;
+  color: #6b7280;
+  margin: 1.5rem 0;
+}
+
+/* Hide webkit scrollbars for premium look but keep scrolling functional */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle Pulsing Rings for Hotline and Floating widgets */
+@keyframes ringPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(128, 0, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(128, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(128, 0, 0, 0);
+  }
+}
+
+.pulsing-hotline {
+  animation: ringPulse 2s infinite;
+}
+
+@keyframes ringPulseZalo {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 104, 230, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(0, 104, 230, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 104, 230, 0);
+  }
+}
+
+.pulsing-zalo {
+  animation: ringPulseZalo 2s infinite;
+}
+
+@keyframes ringPulseFb {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(0, 132, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0);
+  }
+}
+
+.pulsing-fb {
+  animation: ringPulseFb 2s infinite;
+}
+
+/* Custom robust cursor support for interactive elements */
+button, 
+a, 
+input[type="submit"], 
+input[type="button"], 
+input[type="checkbox"], 
+input[type="radio"], 
+select,
+label,
+.tab-button,
+.cursor-pointer {
+  cursor: pointer !important;
+}
+

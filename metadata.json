@@ -1,0 +1,6 @@
+{
+  "name": "Tổng Kho Gas, Bếp Gas & Bình Oxy Premium",
+  "description": "Hệ thống phân phối Gas sạch, bếp gas cao cấp, bình Oxy y tế & công nghiệp và phụ kiện chính hãng. Hỗ trợ lắp đặt tận nơi, bảo an 24/7.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
