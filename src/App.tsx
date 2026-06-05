@@ -7,6 +7,9 @@ import { BlogsView } from './components/BlogsView';
 import { AdminPanel } from './components/AdminPanel';
 import { FloatingActions } from './components/FloatingActions';
 import { Bell, Info, ShieldAlert } from 'lucide-react';
+import { isSupabaseConfigured } from './supabaseClient';
+
+console.log("SUPABASE CONFIG:", isSupabaseConfigured());
 
 function AppContent() {
   const { currentView, toast } = useApp();
