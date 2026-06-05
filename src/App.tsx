@@ -9,7 +9,6 @@ import { FloatingActions } from './components/FloatingActions';
 import { Bell, Info, ShieldAlert } from 'lucide-react';
 import { isSupabaseConfigured } from './supabaseClient';
 
-console.log("SUPABASE CONFIG:", isSupabaseConfigured());
 
 function AppContent() {
   const { currentView, toast } = useApp();

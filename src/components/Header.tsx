@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
       <div className="bg-[#800000] text-white py-1.5 px-4 text-xs">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
           <div className="flex items-center gap-2 text-[11px] sm:text-xs tracking-wide opacity-90 truncate">
-            <span className="font-semibold bg-white/15 px-1.5 py-0.5 rounded text-[#D4B483]">PGS PREMIUM</span>
+            <span className="font-semibold bg-white/15 px-1.5 py-0.5 rounded text-[#D4B483]">GAS PREMIUM</span>
             <span>MST: {contact.mst}</span>
           </div>
           <div className="flex items-center gap-4 text-[11px] sm:text-xs">
@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
             </div>
             <div>
               <div className="font-extrabold text-lg tracking-tight leading-tight text-gray-900 flex items-center gap-1.5">
-                PGS <span className="text-[#800000]">GAS</span>
+                GAS <span className="text-[#800000]">KIỆT GẠO</span>
               </div>
               <p className="text-[10px] font-medium text-gray-500 tracking-wider uppercase">Năng lượng Việt - An toàn Nhật</p>
             </div>
@@ -166,7 +166,7 @@ export const Header: React.FC = () => {
           {/* Desktop Direct Contact Panel */}
           <div className="hidden sm:flex items-center gap-3">
             <div className="text-right">
-              <p className="text-[10px] font-semibold text-gray-400 tracking-wider">HỖ TRỢ ĐỔI GAS 24/7</p>
+              <p className="text-[10px] font-semibold text-gray-400 tracking-wider">ĐỔI GAS NHANH CHÓNG</p>
               <a href={`tel:${contact.hotline}`} className="text-[#800000] font-black text-lg tracking-tight hover:underline">
                 {contact.hotline}
               </a>
@@ -211,7 +211,7 @@ export const Header: React.FC = () => {
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-2xl z-50 animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="px-4 py-5 space-y-4">
             <div className="grid grid-cols-2 gap-2 text-xs font-semibold text-gray-500 uppercase pb-2 border-b border-gray-100">
-              <span>Độc quyền PGS Vietnam</span>
+              <span>Tiêu Biểu Gas Chất Lượng Cao Cấp</span>
               <span className="text-right text-[#800000]">Hotline: {contact.hotline}</span>
             </div>
             <div className="flex flex-col gap-3 font-medium text-base text-gray-800">
@@ -288,7 +288,7 @@ export const Header: React.FC = () => {
 
             <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
               <div>
-                <p className="text-[10px] text-gray-400 font-bold">Giao Gas Toàn Quốc</p>
+                <p className="text-[10px] text-gray-400 font-bold">Giao Gas Nhanh Chóng</p>
                 <a href={`tel:${contact.hotline}`} className="text-base text-[#800000] font-black tracking-tight block">
                   {contact.hotline}
                 </a>
