@@ -34,8 +34,8 @@ export const Header: React.FC = () => {
   }));
 
   return (
-    <header 
-      className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-100" 
+    <header
+      className="sticky top-0 z-50 w-full bg-white shadow-sm border-b border-gray-100"
       style={{ position: 'sticky', top: 0 }}
     >
       {/* Top microbar */}
@@ -57,15 +57,19 @@ export const Header: React.FC = () => {
       {/* Main branding & navigation bar */}
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between gap-4">
-          
+
           {/* Logo brand block */}
-          <div 
+          <div
             id="brand_logo_container"
-            onClick={() => navigateTo('home')} 
+            onClick={() => navigateTo('home')}
             className="flex items-center gap-2.5 cursor-pointer shrink-0"
           >
-            <div className="w-11 h-11 bg-[#800000] rounded-lg flex items-center justify-center text-white font-black text-xl shadow-[0_4px_12px_rgba(128,0,0,0.15)] select-none border border-[#D4B483]/30">
-              P
+            <div className="w-11 h-11 bg-white rounded-lg flex items-center justify-center shadow-[0_4px_12px_rgba(128,0,0,0.15)] border border-[#D4B483]/30 overflow-hidden">
+              <img
+                src="/assets/images/logo.png"
+                alt="Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="font-extrabold text-lg tracking-tight leading-tight text-gray-900 flex items-center gap-1.5">
@@ -92,9 +96,8 @@ export const Header: React.FC = () => {
           <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-[15px] text-gray-700">
             <button
               onClick={() => navigateTo('home')}
-              className={`hover:text-[#800000] py-1 border-b-2 transition-all cursor-pointer ${
-                currentView === 'home' ? 'border-[#800000] text-[#800000] font-semibold' : 'border-transparent'
-              }`}
+              className={`hover:text-[#800000] py-1 border-b-2 transition-all cursor-pointer ${currentView === 'home' ? 'border-[#800000] text-[#800000] font-semibold' : 'border-transparent'
+                }`}
             >
               Trang Chủ
             </button>
@@ -104,9 +107,8 @@ export const Header: React.FC = () => {
                   setSelectedCategory('all');
                   navigateTo('products');
                 }}
-                className={`hover:text-[#800000] flex items-center gap-1 transition-colors cursor-pointer ${
-                  currentView === 'products' ? 'text-[#800000] font-semibold' : ''
-                }`}
+                className={`hover:text-[#800000] flex items-center gap-1 transition-colors cursor-pointer ${currentView === 'products' ? 'text-[#800000] font-semibold' : ''
+                  }`}
               >
                 Sản Phẩm
               </button>
@@ -135,12 +137,11 @@ export const Header: React.FC = () => {
                 ))}
               </div>
             </div>
-            
+
             <button
               onClick={() => navigateTo('blogs')}
-              className={`hover:text-[#800000] py-1 border-b-2 transition-all cursor-pointer ${
-                currentView === 'blogs' ? 'border-[#800000] text-[#800000] font-semibold' : 'border-transparent'
-              }`}
+              className={`hover:text-[#800000] py-1 border-b-2 transition-all cursor-pointer ${currentView === 'blogs' ? 'border-[#800000] text-[#800000] font-semibold' : 'border-transparent'
+                }`}
             >
               Cẩm Nang & Tin Tức
             </button>
@@ -220,9 +221,8 @@ export const Header: React.FC = () => {
                   navigateTo('home');
                   setMobileMenuOpen(false);
                 }}
-                className={`text-left py-1 hover:text-[#800000] ${
-                  currentView === 'home' ? 'text-[#800000] font-bold' : ''
-                }`}
+                className={`text-left py-1 hover:text-[#800000] ${currentView === 'home' ? 'text-[#800000] font-bold' : ''
+                  }`}
               >
                 Trang Chủ
               </button>
@@ -232,13 +232,12 @@ export const Header: React.FC = () => {
                   navigateTo('products');
                   setMobileMenuOpen(false);
                 }}
-                className={`text-left py-1 hover:text-[#800000] ${
-                  currentView === 'products' ? 'text-[#800000] font-bold' : ''
-                }`}
+                className={`text-left py-1 hover:text-[#800000] ${currentView === 'products' ? 'text-[#800000] font-bold' : ''
+                  }`}
               >
                 Danh Mục Sản Phẩm
               </button>
-              
+
               <div className="pl-3 flex flex-wrap gap-1.5">
                 {categories.map((cat) => (
                   <button
@@ -260,9 +259,8 @@ export const Header: React.FC = () => {
                   navigateTo('blogs');
                   setMobileMenuOpen(false);
                 }}
-                className={`text-left py-1 hover:text-[#800000] ${
-                  currentView === 'blogs' ? 'text-[#800000] font-bold' : ''
-                }`}
+                className={`text-left py-1 hover:text-[#800000] ${currentView === 'blogs' ? 'text-[#800000] font-bold' : ''
+                  }`}
               >
                 Cẩm Nang & Tin Tức
               </button>

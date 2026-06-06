@@ -612,7 +612,7 @@ export const HomeView: React.FC = () => {
               <div className="bg-gray-50 p-5 rounded-lg border border-gray-100 space-y-2">
                 <div className="flex items-center gap-2 text-xs font-bold text-gray-800">
                   <MapPin className="w-4.5 h-4.5 text-[#800000]" />
-                  <span>TRỤ SỞ CHÍNH TRƯỜNG THUẬN LỢI</span>
+                  <span>ĐỊA CHỈ CỬA HÀNG</span>
                 </div>
                 <p className="text-xs text-gray-500 pl-6 leading-relaxed">
                   {contact.addressMain}
