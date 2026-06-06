@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { Phone, Search, Menu, X, ShieldCheck, HelpCircle, MapPin, Settings2 } from 'lucide-react';
+import logo from "@/assets/images/logo.png";
 
 export const Header: React.FC = () => {
   const {
@@ -64,9 +65,9 @@ export const Header: React.FC = () => {
             onClick={() => navigateTo('home')}
             className="flex items-center gap-2.5 cursor-pointer shrink-0"
           >
-            <div className="w-11 h-11 bg-white rounded-lg flex items-center justify-center shadow-[0_4px_12px_rgba(128,0,0,0.15)] border border-[#D4B483]/30 overflow-hidden">
+            <div className="w-11 h-11 rounded-lg flex items-center justify-center overflow-hidden">
               <img
-                src="/assets/images/logo.png"
+                src={logo}
                 alt="Logo"
                 className="w-full h-full object-contain"
               />
