@@ -32,10 +32,10 @@ export const Footer: React.FC = () => {
             Cửa hàng chuyên phân phối khí hóa lỏng (Petrolimex Gas, Mỹ Trà Gas, Total Gas, SP Gas, Petimex Gas), bình khí nén cao áp Oxy và các linh kiện bếp an toàn tuyệt đối từ Nhật Bản.
           </p>
           <div className="space-y-1 pt-1">
-            <div className="text-[11px] text-gray-500 font-medium">ĐẠI DIỆN PHÁP LUẬT:</div>
+            {/* <div className="text-[11px] text-gray-500 font-medium">ĐẠI DIỆN PHÁP LUẬT:</div>
             <p className="text-xs text-gray-300 font-semibold">{contact.representative}</p>
             <div className="text-[11px] text-gray-500 font-medium mt-1">SỐ ĐĂNG KÝ KINH DOANH:</div>
-            <p className="text-xs text-gray-300 font-mono text-[11px]">{contact.mst}</p>
+            <p className="text-xs text-gray-300 font-mono text-[11px]">{contact.mst}</p> */}
           </div>
         </div>
 
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
                 </a>
               </div>
             </div>
-            <div className="flex items-start gap-2.5">
+            {/* <div className="flex items-start gap-2.5">
               <Phone className="w-4 h-4 text-gray-400 shrink-0 mt-0.5" />
               <div>
                 <p className="text-[10px] text-gray-500 font-bold">KỸ THUẬT & DỰ ÁN OXY</p>
@@ -119,7 +119,7 @@ export const Footer: React.FC = () => {
                   {contact.phoneTechnical}
                 </a>
               </div>
-            </div>
+            </div> */}
             <div className="flex items-start gap-2.5">
               <Mail className="w-4 h-4 text-gray-400 shrink-0 mt-0.5" />
               <div>
@@ -181,14 +181,14 @@ export const Footer: React.FC = () => {
             <MapPin className="w-4 h-4 text-[#800000] shrink-0 mt-0.5" />
             <p className="font-semibold text-xs">ĐỊA CHỈ: <span className="text-white">{contact.addressMain}</span></p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pl-5 text-[11px] text-gray-400">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pl-5 text-[11px] text-gray-400">
             {contact.addressBranch.map((branch, idx) => (
               <div key={idx} className="flex items-center gap-1.5 bg-gray-900/40 p-1.5 rounded">
                 <span className="w-1.5 h-1.5 bg-[#D4B483] rounded-full shrink-0"></span>
                 <span>{branch}</span>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

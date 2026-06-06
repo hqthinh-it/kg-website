@@ -402,22 +402,22 @@ export const INITIAL_PROMO_CAMPAIGNS: PromotionCampaign[] = [
 ];
 
 export const INITIAL_CONTACT: CompanyContact = {
-  companyName: 'CÔNG TY CP THƯƠNG MẠI GAS & THIẾT BỊ NĂNG LƯỢNG PREMIUM (PGS VIETNAM)',
-  representative: 'Ông Nguyễn Hoàng PGS - Giám đốc Điều hành',
+  companyName: 'CỬA HÀNG GAS KIỆT GẠO - LAI VUNG',
+  representative: 'Ông Phan Chánh Trọng - Đại diện hợp pháp',
   mst: '0108927455 - Sở KH&ĐT Thành phố cấp phép hoạt động',
-  hotline: '1900 6828',
-  phoneSales: '0988.425.999',
-  phoneTechnical: '0912.658.247',
-  email: 'lienhe@pgspremium.com.vn',
-  addressMain: 'Tầng 12, Tòa nhà Ruby Tower, Số 81 Hàm Nghi, Quận 1, TP. Hồ Chí Minh',
+  hotline: '0939 843 725',
+  phoneSales: '0939 843 725',
+  phoneTechnical: '0939 843 725',
+  email: 'contact@gaskietgao.com',
+  addressMain: 'Ấp 1, Xã Hòa Long, Tỉnh Đồng Tháp (Bờ kè Chợ Cũ)',
   addressBranch: [
     'Chi nhánh Hà Nội: Số 42 Ngách 12/8 Kim Giang, Quận Thanh Xuân, Hà Nội',
     'Tổng kho Miền Nam: KCN Cát Lái, Cảng Phú Mỹ, Quận 2, TP. Hồ Chí Minh',
     'Trạm chiết nạp Gas miền Tây: QL1A, TP Tân An, Tỉnh Long An'
   ],
-  zaloLink: 'https://zalo.me/0988425999',
-  fbMessengerLink: 'https://m.me/pgs_vietnam_premium',
-  mapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5132717757!2d106.69992357593723!3d10.771963959275487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f41656209b5%3A0xea736f1e29e924a3!2zODEgSGFtIE5naGksIELhur9uIE5naMOpLCBRdeG6rW4gMSwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1716912345678!5m2!1sen!2s'
+  zaloLink: 'https://zalo.me/0939843725',
+  fbMessengerLink: 'https://www.facebook.com/profile.php?id=61574257212601',
+  mapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.8454307812412!2d105.6542506056432!3d10.288857427545484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a79be052ccd29%3A0x6655c324d2b94c7b!2zQ-G7rWEgSMOgbmcgR2FzIEtp4buHdCBH4bqhbw!5e1!3m2!1svi!2s!4v1780705021505!5m2!1svi!2s'
 };
 
 export const INITIAL_POPUP: PromotionPopup = {
@@ -431,19 +431,19 @@ export const INITIAL_POPUP: PromotionPopup = {
 };
 
 export const INITIAL_SEO: WebSEOConfig = {
-  metaTitle: 'Tổng Kho Gas Sạch, Bếp Gas Nhập Khẩu & Bình Oxy Toàn Quốc - PGS Premium',
+  metaTitle: 'Tổng Kho Gas Sạch, Bếp Gas Nhập Khẩu & Bình Oxy Toàn Quốc - Gas Kiệt Gạo',
   metaDescription: 'Hệ thống năng lượng PGS Premium Việt Nam. Nhập khẩu và phân phối trực tiếp vỏ bình gas Siam, Petrolimex, bếp gas Paloma Nhật Bản, bình Oxy y tế chất lượng vượt trội. Bảo an 24/7.',
   metaKeywords: 'gas sach, can ga, thiet bi nha bep, bep gas rinnai, bep gas paloma, binh oxy y te, van gas katsura, doi binh gas gan day',
   ogImage: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200'
 };
 
 export const INITIAL_WORDING: WordingConfig = {
-  heroTitle: 'An Toàn Tối Thượng - Tiết Kiệm Tối Đa',
-  heroSub: 'PGS Premium cam kết 100% vỏ bình gas mới kiểm định chất lượng, phục vụ siêu tốc và bảo dưỡng bếp nấu miễn phí trọn đời.',
-  aboutTitle: 'Tập Đoàn Năng Lượng Gas Quốc Tế PGS',
+  heroTitle: 'An Toàn Tuyệt Đối - Tiết Kiệm Tối Đa',
+  heroSub: 'Gas Kiệt Gạo cam kết 100% vỏ bình gas mới kiểm định chất lượng, phục vụ siêu tốc và bảo dưỡng bếp nấu miễn phí trọn đời.',
+  aboutTitle: 'Cửa Hàng Gas Gas Kiệt Gạo Chuyên Nghiệp',
   aboutLead: 'Thương hiệu tiên phong nâng tầm an toàn rò rỉ khí gas tại hàng triệu gia đình Việt Nam.',
-  aboutText: 'Được thành lập với tầm nhìn trở thành đại sứ bảo hiểm an toàn chất đốt bếp gia đình và thiết bị y tế y khoa, PGS Premium không ngừng kiến tạo các quy chuẩn lắp ráp khắt khe kết hợp cùng các thương hiệu đầu ngành như Katsura Nhật Bản, Paloma và Siam Gas Thái Lan. Mỗi giọt gas của chúng tôi mang cam kết khí sạch 100% không bám lọ đáy nấu, mang trọn sự an vui đầm ấm cho mâm cơm gia đình.',
-  whyChooseUsTitle: 'Giá Trị Biệt Lập Chỉ Có Tại PGS Việt Nam',
+  aboutText: 'Được thành lập với tầm nhìn trở thành đại sứ bảo hiểm an toàn chất đốt bếp gia đình, Gas Kiệt Gạo không ngừng kiến tạo các quy chuẩn lắp ráp khắt khe kết hợp cùng các thương hiệu đầu ngành như Petimex, Total hay Petrolimex. Mỗi giọt gas của chúng tôi mang cam kết khí sạch 100% không bám lọ đáy nấu, mang trọn sự an vui đầm ấm cho mâm cơm gia đình.',
+  whyChooseUsTitle: 'Giá Trị Tuyệt Đối Chỉ Có Tại Gas Kiệt Gạo',
   certificateTitle: 'Chứng Nhận Chất Lượng Quốc Tế & An Toàn Phòng Cháy Chữa Cháy'
 };
 
