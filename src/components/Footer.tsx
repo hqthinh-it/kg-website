@@ -6,6 +6,7 @@
 import React from 'react';
 import { useApp } from '../context/AppContext';
 import { Phone, Mail, MapPin, Award, CheckCircle, ShieldAlert, FileText } from 'lucide-react';
+import logo from "@/assets/images/logo.png";
 
 export const Footer: React.FC = () => {
   const { navigateTo, contact } = useApp();
