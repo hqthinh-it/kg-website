@@ -14,12 +14,16 @@ export const Footer: React.FC = () => {
     <footer className="bg-[#1f1f1f] text-gray-300 pt-16 pb-8 border-t-4 border-[#800000]">
       {/* Upper Footer section */}
       <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-        
+
         {/* Company brief */}
         <div className="space-y-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 bg-[#800000] rounded-lg flex items-center justify-center text-white font-black text-lg select-none">
-              P
+            <div className="w-11 h-11 rounded-lg flex items-center justify-center overflow-hidden">
+              <img
+                src={logo}
+                alt="Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="font-extrabold text-base tracking-tight text-white">
