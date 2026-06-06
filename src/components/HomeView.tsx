@@ -123,7 +123,7 @@ export const HomeView: React.FC = () => {
                       {/* Premium Accent badge */}
                       <div className="inline-flex items-center gap-2 bg-[#800000] text-[#D4B483] px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-widest border border-[#D4B483]/20">
                         <Sparkles className="w-3.5 h-3.5" />
-                        <span>Siam Gas & Petrolimex Chính Hãng</span>
+                        <span>Total Gas & Petrolimex Chính Hãng</span>
                       </div>
 
                       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-none text-white font-sans">
@@ -226,7 +226,7 @@ export const HomeView: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
             <div className="text-[#800000] text-xs font-bold uppercase tracking-widest">{wordings.whyChooseUsTitle}</div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#2B2B2B]">
-              Lý Do Hơn 10,000+ Khách Hàng Tin Dùng PGS Premium
+              Lý Do Hơn 2,000+ Khách Hàng Tin Dùng Gas Kiệt Gạo
             </h2>
             <div className="w-16 h-1 bg-[#800000] mx-auto rounded-full"></div>
           </div>
@@ -250,7 +250,7 @@ export const HomeView: React.FC = () => {
               </div>
               <h3 className="font-bold text-lg text-gray-900">Giao Gas Hỏa Tốc (15 Phút)</h3>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Đội ngũ kỹ thuật viên thường trực toàn quốc, am hiểu kiểm định phòng cháy nổ, giao và lắp ráp chuẩn Nhật tại nhà chỉ vòng từ 15-20 phút.
+                Đội ngũ kỹ thuật viên thường trực, am hiểu kiểm định phòng cháy nổ, giao và lắp ráp chuẩn Nhật tại nhà chỉ vòng từ 15-20 phút.
               </p>
             </div>
 
@@ -259,9 +259,9 @@ export const HomeView: React.FC = () => {
               <div className="w-12 h-12 rounded-lg bg-[#800000]/10 flex items-center justify-center text-[#800000]">
                 <Clock className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-lg text-gray-900">Phục Vụ Bảo An 24/7</h3>
+              <h3 className="font-bold text-lg text-gray-900">Phục Vụ Nhanh chóng</h3>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Bất kể ngày nghỉ lễ hay đêm tối, tổng đài khẩn cấp luôn phản hồi lập tức để giải cứu sự cố rò rỉ hoặc cấp khí oxy y tế thở cấp bách kịp thời.
+                Bất kể ngày chủ nhật hay nghỉ lễ, tổng đài khẩn cấp luôn phản hồi lập tức để giải cứu sự cố rò rỉ hoặc cấp khí oxy y tế thở cấp bách kịp thời.
               </p>
             </div>
 
@@ -451,7 +451,7 @@ export const HomeView: React.FC = () => {
               {/* Counters */}
               <div className="grid grid-cols-3 gap-6 pt-5 border-t border-gray-200">
                 <div>
-                  <div className="text-2xl sm:text-3xl font-black text-[#800000]">10,000+</div>
+                  <div className="text-2xl sm:text-3xl font-black text-[#800000]">2,000+</div>
                   <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase mt-1">Hộ Gia Đình Sử Dụng</div>
                 </div>
                 <div>
@@ -478,7 +478,7 @@ export const HomeView: React.FC = () => {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">{wordings.certificateTitle}</h2>
             <div className="w-16 h-1 bg-[#800000] mx-auto rounded-full"></div>
             <p className="text-xs text-gray-500 leading-relaxed">
-              Toàn bộ sản phẩm bình gas và thiết bị oxy tại hệ thống kho PGS đều phải trải qua kiểm nghiệm khắc khe của Trung tâm Kiểm định Công nghiệp I, trang bị lớp vỏ chịu lực cao áp đạt chứng nhận quốc gia.
+              Toàn bộ sản phẩm bình gas và thiết bị oxy tại hệ thống kho GAS KIỆT GẠO đều phải trải qua kiểm nghiệm khắc khe của Trung tâm Kiểm định Công nghiệp I, trang bị lớp vỏ chịu lực cao áp đạt chứng nhận quốc gia.
             </p>
           </div>
 
@@ -598,7 +598,7 @@ export const HomeView: React.FC = () => {
               {/* Map Holder */}
               <div className="w-full h-[280px] rounded-xl overflow-hidden border border-gray-200 shadow-md">
                 <iframe
-                  title="PGS Vietnam Map Location"
+                  title="GAS KIỆT GẠO"
                   src={contact.mapsEmbedUrl}
                   width="100%"
                   height="100%"
@@ -625,7 +625,7 @@ export const HomeView: React.FC = () => {
               <div className="space-y-1.5">
                 <h3 className="font-extrabold text-[20px] text-gray-900">Gửi Yêu Cầu Tư Vấn Mẫu</h3>
                 <p className="text-xs text-gray-500">
-                  Vui lòng cung cấp chính xác thông tin, tư vấn viên PGS sẽ hỗ trợ qua Zalo sau 5-15 phút. No checkout - No online payment.
+                  Vui lòng cung cấp chính xác thông tin, nhân viên Gas Kiệt Gạo sẽ hỗ trợ qua Zalo sau 5-15 phút. No checkout - No online payment.
                 </p>
               </div>
 

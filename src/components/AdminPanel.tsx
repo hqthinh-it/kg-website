@@ -212,7 +212,7 @@ export const AdminPanel: React.FC = () => {
   // Helper method to insert image at cursor position
   const handleInsertImageAtCursor = (imgIdOrBase64: string, altText: string) => {
     const textarea = blogContentRef.current;
-    const alt = altText.trim() || 'Hình ảnh cẩm nang PGS';
+    const alt = altText.trim() || 'Hình ảnh cẩm nang GAS KIỆT GẠO';
     const markdownText = `\n![${alt}](${imgIdOrBase64})\n`;
     if (textarea) {
       const startPos = textarea.selectionStart;
@@ -306,7 +306,7 @@ export const AdminPanel: React.FC = () => {
       category: 'an-toan',
       categoryName: 'Mẹo sử dụng gas an toàn',
       tags: ['An toàn gas'],
-      author: 'Ban Giám Đốc PGS Corp',
+      author: 'Đại diện GAS KIỆT GẠO',
       date: new Date().toISOString().split('T')[0],
       slug: '',
       summary: '',
@@ -439,7 +439,7 @@ export const AdminPanel: React.FC = () => {
           </div>
           <div className="space-y-1">
             <h2 className="text-xl font-bold text-gray-900">Yêu cầu đăng nhập CMS</h2>
-            <p className="text-xs text-gray-400">Hệ thống quản trị chỉ dành riêng cho kỹ sư quản lý kho PGS Premium.</p>
+            <p className="text-xs text-gray-400">Hệ thống quản trị chỉ dành riêng cho quản lý kho GAS KIỆT GẠO.</p>
           </div>
         </div>
 
@@ -484,7 +484,7 @@ export const AdminPanel: React.FC = () => {
         </form>
 
         <p className="text-[10px] text-gray-400 font-light text-center font-mono">
-          * Độc quyền bảo an bởi cơ cấu mã hóa dữ liệu PGS Portal v3.6.
+          * Độc quyền bảo an bởi cơ cấu mã hóa dữ liệu GAS KIỆT GẠO.
         </p>
       </div>
     );

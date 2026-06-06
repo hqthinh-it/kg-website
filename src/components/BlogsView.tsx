@@ -229,7 +229,7 @@ export const BlogsView: React.FC = () => {
       return;
     }
 
-    setBlogInquirySuccess('Yêu cầu nhận cẩm nang an toàn đã được gửi tới PGS! Chúng tôi sẽ gọi hỗ trợ ngay.');
+    setBlogInquirySuccess('Yêu cầu nhận cẩm nang an toàn đã được gửi tới GAS KIỆT GẠO! Chúng tôi sẽ gọi hỗ trợ ngay.');
     setBlogInquiryName('');
     setBlogInquiryPhone('');
     setBlogInquiryMsg('');
@@ -567,7 +567,7 @@ export const BlogsView: React.FC = () => {
               <span className="text-3xl">📝</span>
               <h3 className="font-bold text-gray-800 text-lg">Chưa có bài viết ở chuyên mục này</h3>
               <p className="text-xs text-gray-400 leading-relaxed font-light">
-                Chuyên mục tin tức này đang được phòng biên tập PGS thẩm định nội dung để cung cấp quy trình kỹ thuật chuẩn xác nhất tới quý độc giả.
+                Chuyên mục tin tức này đang được phòng biên tập GAS KIỆT GẠO thẩm định nội dung để cung cấp quy trình kỹ thuật chuẩn xác nhất tới quý độc giả.
               </p>
               <button
                 onClick={() => setSelectedMetaCategory('all')}

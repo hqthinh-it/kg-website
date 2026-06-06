@@ -258,7 +258,7 @@ export const ProductsView: React.FC = () => {
               {/* Safety banner notes */}
               <div className="bg-red-50 p-4 rounded-xl border border-red-100/60 leading-relaxed space-y-2">
                 <div className="text-xs font-bold text-red-800 flex items-center gap-1.5">
-                  <span>⚠️ CAM KẾT CHẤT LƯỢNG PGS</span>
+                  <span>⚠️ CAM KẾT CHẤT LƯỢNG TỪ GAS KIỆT GẠO</span>
                 </div>
                 <ul className="text-[11px] text-red-700 space-y-1 pl-4 list-disc">
                   <li>Bảo hiểm an toàn chất đốt lên đến 2 tỷ đồng.</li>
@@ -273,7 +273,7 @@ export const ProductsView: React.FC = () => {
             <div className="lg:col-span-3 bg-white p-6 rounded-2xl border border-gray-100 shadow-xl space-y-6 lg:sticky lg:top-32">
               <div className="space-y-2 text-center lg:text-left">
                 <h3 className="font-bold text-sm text-gray-900">LIÊN HỆ KHUYÊN DÙNG</h3>
-                <p className="text-xs text-gray-400">Không thanh toán online, quý khách vui lòng liên lạc tư vấn trực tiếp:</p>
+                <p className="text-xs text-gray-400">Quý khách vui lòng liên lạc tư vấn trực tiếp:</p>
               </div>
 
               {/* 3 Floater buttons inside block */}
@@ -376,7 +376,7 @@ export const ProductsView: React.FC = () => {
           
           {/* Header title */}
           <div className="text-center max-w-2xl mx-auto space-y-2">
-            <span className="text-[#800000] text-xs font-bold uppercase tracking-widest">Kho thiết bị PGS</span>
+            <span className="text-[#800000] text-xs font-bold uppercase tracking-widest">Kho thiết bị GAS KIỆT GẠO</span>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-[#2B2B2B]">
               Danh Mục Sản Phẩm Gas & Bình Oxy Y Tế
             </h1>

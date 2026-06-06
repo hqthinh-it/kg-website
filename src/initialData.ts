@@ -248,7 +248,7 @@ export const INITIAL_BLOGS: Blog[] = [
     category: 'an-toan',
     categoryName: 'Mẹo sử dụng gas an toàn',
     tags: ['An toàn gas', 'Mẹo gia đình', 'Chống rò rỉ gas'],
-    author: 'Đại diện Kỹ thuật PGS',
+    author: 'Đại diện Kỹ thuật GAS KIỆT GẠO',
     date: '2026-05-15',
     summary: 'Sử dụng gas hằng ngày nhưng bạn đã thực sự biết các quy tắc an toàn cốt lõi? Cùng đọc bài viết để tránh các thói quen tai hại dễ gây rò rỉ khí gas dẫn đến nguy hiểm.',
     content: `## 1. Tầm quan trọng của việc hiểu biết quy trình an toàn gas

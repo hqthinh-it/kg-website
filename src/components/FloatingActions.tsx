@@ -83,7 +83,7 @@ export const FloatingActions: React.FC = () => {
           className="w-13 h-13 bg-[#0068e6] rounded-full flex items-center justify-center text-white shadow-xl hover:-translate-y-1 transition-transform pulsing-zalo cursor-pointer relative group"
         >
           <span className="absolute right-full mr-3 bg-[#0068e6] text-white text-[10px] font-bold px-2 py-1 rounded shadow-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-            Liên hệ Zalo 24/7
+            Liên hệ Zalo
           </span>
           
           {/* Zalo Premium custom styled Icon */}

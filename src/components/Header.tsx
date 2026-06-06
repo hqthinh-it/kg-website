@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
               <div className="font-extrabold text-lg tracking-tight leading-tight text-gray-900 flex items-center gap-1.5">
                 GAS <span className="text-[#800000]">KIỆT GẠO</span>
               </div>
-              <p className="text-[10px] font-medium text-gray-500 tracking-wider uppercase">Năng lượng Việt - An toàn Nhật</p>
+              <p className="text-[10px] font-medium text-gray-500 tracking-wider uppercase">Năng lượng Việt Cao cấp</p>
             </div>
           </div>
 

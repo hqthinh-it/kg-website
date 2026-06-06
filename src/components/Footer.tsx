@@ -23,13 +23,13 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <div className="font-extrabold text-base tracking-tight text-white">
-                PGS PREMIUM <span className="text-[#D4B483]">CORP</span>
+                GAS <span className="text-[#D4B483]">KIỆT GẠO</span>
               </div>
               <p className="text-[10px] text-gray-400 font-bold tracking-wider uppercase">Thương hiệu năng lượng an toàn</p>
             </div>
           </div>
           <p className="text-xs text-gray-400 leading-relaxed">
-            Hệ thống phân phối chuyên nghiệp khí hóa lỏng LPG (Siam Gas, Petrolimex), bình khí nén cao áp Oxy và các linh kiện bếp an toàn tuyệt đối từ Nhật Bản.
+            Cửa hàng chuyên phân phối khí hóa lỏng (Petrolimex Gas, Mỹ Trà Gas, Total Gas, SP Gas, Petimex Gas), bình khí nén cao áp Oxy và các linh kiện bếp an toàn tuyệt đối từ Nhật Bản.
           </p>
           <div className="space-y-1 pt-1">
             <div className="text-[11px] text-gray-500 font-medium">ĐẠI DIỆN PHÁP LUẬT:</div>
@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
                 onClick={() => navigateTo('products')}
                 className="hover:text-white hover:underline hover:translate-x-1 transition-all text-left"
               >
-                Bếp Gas Đôi Rinnai & Paloma
+                Bếp Gas Đôi Namilux & Sakura
               </button>
             </li>
             <li>
@@ -161,12 +161,12 @@ export const Footer: React.FC = () => {
             <div className="text-[10px] text-gray-500 uppercase font-black tracking-wider mb-2">Đăng Ký Bộ Công Thương</div>
             <div className="flex items-center gap-3">
               {/* Fake Bo Cong Thuong Blue Seal Icon */}
-              <div className="px-3 py-1.5 bg-[#174A84] rounded text-white text-[10px] font-black tracking-widest flex items-center gap-1 border border-blue-400 select-none">
+              {/* <div className="px-3 py-1.5 bg-[#174A84] rounded text-white text-[10px] font-black tracking-widest flex items-center gap-1 border border-blue-400 select-none">
                 <div className="w-3 h-3 rounded-full bg-red-500 border border-white"></div>
                 ĐÃ ĐĂNG KÝ
-              </div>
+              </div> */}
               <div className="text-[9px] text-gray-500 leading-tight">
-                Mã số hồ sơ đăng ký thương mại điện tử: PGS-2026-9284-CO
+                Mã số thuế đăng ký thương mại điện tử: 087070022803
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@ export const Footer: React.FC = () => {
         <div className="lg:col-span-12 space-y-2">
           <div className="flex items-start gap-1.5 text-gray-300">
             <MapPin className="w-4 h-4 text-[#800000] shrink-0 mt-0.5" />
-            <p className="font-semibold text-xs">TRỤ SỞ CHÍNH: <span className="text-white">{contact.addressMain}</span></p>
+            <p className="font-semibold text-xs">ĐỊA CHỈ: <span className="text-white">{contact.addressMain}</span></p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pl-5 text-[11px] text-gray-400">
             {contact.addressBranch.map((branch, idx) => (
@@ -194,11 +194,11 @@ export const Footer: React.FC = () => {
 
       {/* Lower Copyright segment */}
       <div className="max-w-7xl mx-auto px-4 md:px-6 pt-6 mt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-        <p>© 2026 PGS Premium Corporation. Bảo lưu mọi quyền thương hiệu. Trải nghiệm người dùng được tối ưu bởi Premium Agency.</p>
+        <p>© 2026 GASKIETGAO.COM. Bảo lưu mọi quyền thương hiệu. Trải nghiệm người dùng được tối ưu bởi Tooltez.vn</p>
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1">
             <ShieldAlert className="w-3.5 h-3.5" />
-            <span>Cam kết an toàn chất đốt đạt tiêu chuẩn bảo an tối cao</span>
+            <span>Cam kết an toàn chất đốt đạt tiêu chuẩn bảo an tối ưu</span>
           </span>
         </div>
       </div>
