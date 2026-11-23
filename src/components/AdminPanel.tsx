@@ -29,6 +29,7 @@ import {
   Database
 } from 'lucide-react';
 import { SUPABASE_SETUP_SQL } from '../supabaseConfigHelper';
+import { compressImage } from '../utils/imageCompressor';
 
 export const AdminPanel: React.FC = () => {
   const {
@@ -126,17 +127,24 @@ export const AdminPanel: React.FC = () => {
     }
   };
 
-  // Local device file uploader to Base64
+  // Local device file uploader with dynamic image compression to preserve storage limits
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>, callback: (base64: string) => void) => {
     const file = e.target.files?.[0];
     if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        if (typeof reader.result === 'string') {
-          callback(reader.result);
-        }
-      };
-      reader.readAsDataURL(file);
+      compressImage(file)
+        .then((compressedBase64) => {
+          callback(compressedBase64);
+        })
+        .catch((err) => {
+          console.error("Error compressing image:", err);
+          const reader = new FileReader();
+          reader.onloadend = () => {
+            if (typeof reader.result === 'string') {
+              callback(reader.result);
+            }
+          };
+          reader.readAsDataURL(file);
+        });
     }
   };
 
@@ -212,7 +220,7 @@ export const AdminPanel: React.FC = () => {
   // Helper method to insert image at cursor position
   const handleInsertImageAtCursor = (imgIdOrBase64: string, altText: string) => {
     const textarea = blogContentRef.current;
-    const alt = altText.trim() || 'Hình ảnh cẩm nang GAS KIỆT GẠO';
+    const alt = altText.trim() || 'Hình ảnh cẩm nang PGS';
     const markdownText = `\n![${alt}](${imgIdOrBase64})\n`;
     if (textarea) {
       const startPos = textarea.selectionStart;
@@ -306,7 +314,7 @@ export const AdminPanel: React.FC = () => {
       category: 'an-toan',
       categoryName: 'Mẹo sử dụng gas an toàn',
       tags: ['An toàn gas'],
-      author: 'Đại diện GAS KIỆT GẠO',
+      author: 'Ban Giám Đốc PGS Corp',
       date: new Date().toISOString().split('T')[0],
       slug: '',
       summary: '',
@@ -439,7 +447,7 @@ export const AdminPanel: React.FC = () => {
           </div>
           <div className="space-y-1">
             <h2 className="text-xl font-bold text-gray-900">Yêu cầu đăng nhập CMS</h2>
-            <p className="text-xs text-gray-400">Hệ thống quản trị chỉ dành riêng cho quản lý kho GAS KIỆT GẠO.</p>
+            <p className="text-xs text-gray-400">Hệ thống quản trị chỉ dành riêng cho kỹ sư quản lý kho PGS Premium.</p>
           </div>
         </div>
 
@@ -484,7 +492,7 @@ export const AdminPanel: React.FC = () => {
         </form>
 
         <p className="text-[10px] text-gray-400 font-light text-center font-mono">
-          * Độc quyền bảo an bởi cơ cấu mã hóa dữ liệu GAS KIỆT GẠO.
+          * Độc quyền bảo an bởi cơ cấu mã hóa dữ liệu PGS Portal v3.6.
         </p>
       </div>
     );
@@ -731,10 +739,8 @@ export const AdminPanel: React.FC = () => {
                         const files = e.target.files;
                         if (files) {
                           Array.from(files).forEach((file: File) => {
-                            const reader = new FileReader();
-                            reader.onloadend = () => {
-                              if (typeof reader.result === 'string') {
-                                const base64 = reader.result;
+                            compressImage(file)
+                              .then((base64) => {
                                 setProductForm(prev => {
                                   const currentImages = prev.images || [];
                                   if (!currentImages.includes(base64)) {
@@ -745,9 +751,27 @@ export const AdminPanel: React.FC = () => {
                                   }
                                   return prev;
                                 });
-                              }
-                            };
-                            reader.readAsDataURL(file);
+                              })
+                              .catch((err) => {
+                                console.error("Error compressing image:", err);
+                                const reader = new FileReader();
+                                reader.onloadend = () => {
+                                  if (typeof reader.result === 'string') {
+                                    const base64 = reader.result;
+                                    setProductForm(prev => {
+                                      const currentImages = prev.images || [];
+                                      if (!currentImages.includes(base64)) {
+                                        return {
+                                          ...prev,
+                                          images: [...currentImages, base64]
+                                        };
+                                      }
+                                      return prev;
+                                    });
+                                  }
+                                };
+                                reader.readAsDataURL(file);
+                              });
                           });
                         }
                       }}

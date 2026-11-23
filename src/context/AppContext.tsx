@@ -160,6 +160,15 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [supabaseStatusMsg, setSupabaseStatusMsg] = useState('Đang khởi tạo...');
   const isSupabaseEnabled = isSupabaseConfigured();
 
+  // Helper to safely write to localStorage without crashing if the quota is exceeded
+  const safeSaveToLocalStorage = (key: string, value: any) => {
+    try {
+      localStorage.setItem(key, typeof value === 'string' ? value : JSON.stringify(value));
+    } catch (err) {
+      console.warn(`LocalStorage write failed for key "${key}":`, err);
+    }
+  };
+
   // On Mount: Load data from Supabase/Local Storage
   useEffect(() => {
     const loadData = async () => {
@@ -176,34 +185,34 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       const localCategories = localStorage.getItem('pgs_categories');
 
       if (localProducts) setProducts(JSON.parse(localProducts));
-      else { setProducts(INITIAL_PRODUCTS); localStorage.setItem('pgs_products', JSON.stringify(INITIAL_PRODUCTS)); }
+      else { setProducts(INITIAL_PRODUCTS); safeSaveToLocalStorage('pgs_products', INITIAL_PRODUCTS); }
 
       if (localBlogs) setBlogs(JSON.parse(localBlogs));
-      else { setBlogs(INITIAL_BLOGS); localStorage.setItem('pgs_blogs', JSON.stringify(INITIAL_BLOGS)); }
+      else { setBlogs(INITIAL_BLOGS); safeSaveToLocalStorage('pgs_blogs', INITIAL_BLOGS); }
 
       if (localBanners) setBanners(JSON.parse(localBanners));
-      else { setBanners(INITIAL_BANNERS); localStorage.setItem('pgs_banners', JSON.stringify(INITIAL_BANNERS)); }
+      else { setBanners(INITIAL_BANNERS); safeSaveToLocalStorage('pgs_banners', INITIAL_BANNERS); }
 
       if (localCampaigns) setCampaigns(JSON.parse(localCampaigns));
-      else { setCampaigns(INITIAL_PROMO_CAMPAIGNS); localStorage.setItem('pgs_campaigns', JSON.stringify(INITIAL_PROMO_CAMPAIGNS)); }
+      else { setCampaigns(INITIAL_PROMO_CAMPAIGNS); safeSaveToLocalStorage('pgs_campaigns', INITIAL_PROMO_CAMPAIGNS); }
 
       if (localContact) setContact(JSON.parse(localContact));
-      else { setContact(INITIAL_CONTACT); localStorage.setItem('pgs_contact', JSON.stringify(INITIAL_CONTACT)); }
+      else { setContact(INITIAL_CONTACT); safeSaveToLocalStorage('pgs_contact', INITIAL_CONTACT); }
 
       if (localPopup) setPopup(JSON.parse(localPopup));
-      else { setPopup(INITIAL_POPUP); localStorage.setItem('pgs_popup', JSON.stringify(INITIAL_POPUP)); }
+      else { setPopup(INITIAL_POPUP); safeSaveToLocalStorage('pgs_popup', INITIAL_POPUP); }
 
       if (localSeo) setSeo(JSON.parse(localSeo));
-      else { setSeo(INITIAL_SEO); localStorage.setItem('pgs_seo', JSON.stringify(INITIAL_SEO)); }
+      else { setSeo(INITIAL_SEO); safeSaveToLocalStorage('pgs_seo', INITIAL_SEO); }
 
       if (localWordings) setWordings(JSON.parse(localWordings));
-      else { setWordings(INITIAL_WORDING); localStorage.setItem('pgs_wordings', JSON.stringify(INITIAL_WORDING)); }
+      else { setWordings(INITIAL_WORDING); safeSaveToLocalStorage('pgs_wordings', INITIAL_WORDING); }
 
       if (localQuotes) setQuotes(JSON.parse(localQuotes));
-      else { setQuotes(INITIAL_QUOTES); localStorage.setItem('pgs_quotes', JSON.stringify(INITIAL_QUOTES)); }
+      else { setQuotes(INITIAL_QUOTES); safeSaveToLocalStorage('pgs_quotes', INITIAL_QUOTES); }
 
       if (localCategories) setCategories(JSON.parse(localCategories));
-      else { setCategories(DEFAULT_CATEGORIES); localStorage.setItem('pgs_categories', JSON.stringify(DEFAULT_CATEGORIES)); }
+      else { setCategories(DEFAULT_CATEGORIES); safeSaveToLocalStorage('pgs_categories', DEFAULT_CATEGORIES); }
 
       // 2. Fetch from Supabase online if configured
       if (isSupabaseEnabled) {
@@ -250,18 +259,18 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
             fetchSettingFromDb<WordingConfig>('wordings')
           ]);
 
-          if (dbProducts) { setProducts(dbProducts); localStorage.setItem('pgs_products', JSON.stringify(dbProducts)); }
-          if (dbBlogs) { setBlogs(dbBlogs); localStorage.setItem('pgs_blogs', JSON.stringify(dbBlogs)); }
-          if (dbBanners) { setBanners(dbBanners); localStorage.setItem('pgs_banners', JSON.stringify(dbBanners)); }
-          if (dbCampaigns) { setCampaigns(dbCampaigns); localStorage.setItem('pgs_campaigns', JSON.stringify(dbCampaigns)); }
-          if (dbCategories) { setCategories(dbCategories); localStorage.setItem('pgs_categories', JSON.stringify(dbCategories)); }
-          if (dbQuotes) { setQuotes(dbQuotes); localStorage.setItem('pgs_quotes', JSON.stringify(dbQuotes)); }
-          if (dbContactFetched) { setContact(dbContactFetched); localStorage.setItem('pgs_contact', JSON.stringify(dbContactFetched)); }
-          if (dbPopupFetched) { setPopup(dbPopupFetched); localStorage.setItem('pgs_popup', JSON.stringify(dbPopupFetched)); }
-          if (dbSeoFetched) { setSeo(dbSeoFetched); localStorage.setItem('pgs_seo', JSON.stringify(dbSeoFetched)); }
-          if (dbWordingsFetched) { setWordings(dbWordingsFetched); localStorage.setItem('pgs_wordings', JSON.stringify(dbWordingsFetched)); }
+          if (dbProducts) { setProducts(dbProducts); safeSaveToLocalStorage('pgs_products', dbProducts); }
+          if (dbBlogs) { setBlogs(dbBlogs); safeSaveToLocalStorage('pgs_blogs', dbBlogs); }
+          if (dbBanners) { setBanners(dbBanners); safeSaveToLocalStorage('pgs_banners', dbBanners); }
+          if (dbCampaigns) { setCampaigns(dbCampaigns); safeSaveToLocalStorage('pgs_campaigns', dbCampaigns); }
+          if (dbCategories) { setCategories(dbCategories); safeSaveToLocalStorage('pgs_categories', dbCategories); }
+          if (dbQuotes) { setQuotes(dbQuotes); safeSaveToLocalStorage('pgs_quotes', dbQuotes); }
+          if (dbContactFetched) { setContact(dbContactFetched); safeSaveToLocalStorage('pgs_contact', dbContactFetched); }
+          if (dbPopupFetched) { setPopup(dbPopupFetched); safeSaveToLocalStorage('pgs_popup', dbPopupFetched); }
+          if (dbSeoFetched) { setSeo(dbSeoFetched); safeSaveToLocalStorage('pgs_seo', dbSeoFetched); }
+          if (dbWordingsFetched) { setWordings(dbWordingsFetched); safeSaveToLocalStorage('pgs_wordings', dbWordingsFetched); }
 
-          // showToast('Tải dữ liệu từ Supabase thành công!', 'success');
+          showToast('Tải dữ liệu từ Supabase thành công!', 'success');
         } catch (err: any) {
           setIsSupabaseReady(false);
           setSupabaseStatusMsg('Lỗi đồng bộ: ' + (err.message || 'Không kết nối được'));
@@ -448,7 +457,17 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   // Helper local persistence wrapper
   const saveStateAndStore = (key: string, data: any, stateSetter: Function) => {
     stateSetter(data);
-    localStorage.setItem(key, JSON.stringify(data));
+    try {
+      localStorage.setItem(key, JSON.stringify(data));
+    } catch (err: any) {
+      console.warn(`LocalStorage write failed for key "${key}":`, err);
+      if (err instanceof DOMException && (
+        err.name === 'QuotaExceededError' ||
+        err.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+      )) {
+        showToast('Bộ nhớ đệm cục bộ đã đầy! Nhưng đừng lo, dữ liệu đã được lưu thành công trên ứng dụng và đang đồng bộ lên đám mây.', 'info');
+      }
+    }
   };
 
   // Mutator actions which support offline storage first, and online background syncing
