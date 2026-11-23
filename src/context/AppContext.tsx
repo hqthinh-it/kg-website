@@ -270,7 +270,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
           if (dbSeoFetched) { setSeo(dbSeoFetched); safeSaveToLocalStorage('pgs_seo', dbSeoFetched); }
           if (dbWordingsFetched) { setWordings(dbWordingsFetched); safeSaveToLocalStorage('pgs_wordings', dbWordingsFetched); }
 
-          showToast('Tải dữ liệu từ Supabase thành công!', 'success');
+          // showToast('Tải dữ liệu từ Supabase thành công!', 'success');
         } catch (err: any) {
           setIsSupabaseReady(false);
           setSupabaseStatusMsg('Lỗi đồng bộ: ' + (err.message || 'Không kết nối được'));
